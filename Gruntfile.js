@@ -37,7 +37,7 @@ module.exports = function(grunt){
 
   grunt.loadNpmTasks('grunt-protractor-runner');
 
-  grunt.registerTask('default', ['jshint']);
+  grunt.registerTask('default', ['jshint'], ['protractor']);
 
   // grunt.registerTask('default', ['watch']);
 

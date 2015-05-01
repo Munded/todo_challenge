@@ -6,7 +6,20 @@
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-resource/angular-resource.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/toDoListController.js"></script>
 </head>
-<body>
-  </body>
-  </html>
+<body ng-controller="ToDoListController as listCtrl">
+  <h1> To Do </h1>
+  <form class="form-horizontal">
+    <input type="text" ng-model="listCtrl.taskTerm">
+    <button class="btn" ng-click="listCtrl.addTask()">Submit</button>
+  </form>
+  <ul class="list-group" ng-repeat="task in listCtrl.listDisplay">
+    <li>
+      <div>{{task.task}}</div>
+      <input type='checkbox' ng-click="listCtrl.completed(task)" ng-model="task.completed">
+      <div ng-show="task.completed">Completed</div>
+    </li>
+  </ul>
+</body>
+</html>
