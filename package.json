@@ -1,0 +1,36 @@
+{
+  "name": "todo_challenge",
+  "version": "1.0.0",
+  "description": "To Do List",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Munded/todo_challenge.git"
+  },
+  "author": "Ed O'Brien",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Munded/todo_challenge/issues"
+  },
+  "homepage": "https://github.com/Munded/todo_challenge",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jasmine": "^0.8.2",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-protractor-runner": "^2.0.0",
+    "grunt-protractor-webdriver": "^0.2.0",
+    "jasmine-core": "^2.3.0",
+    "karma": "^0.12.31",
+    "karma-chrome-launcher": "^0.1.8",
+    "karma-jasmine": "^0.3.5",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "protractor": "^2.0.0"
+  },
+  "dependencies": {
+    "express": "^4.12.3"
+  }
+}
