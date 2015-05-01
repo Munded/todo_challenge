@@ -4,12 +4,11 @@ toDoList.controller('ToDoListController', [function() {
   self.listDisplay = []
 
   self.addTask = function() {
-    self.listDisplay.push({"task": self.taskTerm, completed: false})
+    self.listDisplay.push({task: self.taskTerm, completed: false})
   };
 
-  self.completed = function(item) {
+  self.complete = function(item) {
     var i = self.listDisplay.indexOf(item) 
     self.listDisplay[i].completed = true
-    console.log(item)
   }
 }]);

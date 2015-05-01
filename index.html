@@ -17,7 +17,7 @@
   <ul class="list-group" ng-repeat="task in listCtrl.listDisplay">
     <li>
       <div>{{task.task}}</div>
-      <input type='checkbox' ng-click="listCtrl.completed(task)" ng-model="task.completed">
+      <input type='checkbox' ng-click="listCtrl.complete(task)" ng-model="task.completed">
       <div ng-show="task.completed">Completed</div>
     </li>
   </ul>

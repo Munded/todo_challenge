@@ -8,31 +8,23 @@ describe('ToDoListController', function() {
   }));
 
   it('initialises with an empty list and term', function() {
-    expect(ctrl.listDisplay).toBeUndefined();
+    expect(ctrl.listDisplay).toEqual([]);
     expect(ctrl.taskTerm).toBeUndefined();
   });
 
   describe('when viewing the to do list', function(){
 
-    var items = [
-    {
-      "task" : "Laundry", 
-      "Completed" : false
-    },
-    {
-      "task" : "Shopping",
-      "Completed" : false
-    },
-    {
-      "task" : "Cooking",
-      "Completed" : false
-    }
-    ];
-
     it('displays list items', function() {
       ctrl.taskTerm = "hello";
       ctrl.addTask();
-      expect(ctrl.listDisplay.items).toEqual(items);
+      expect(ctrl.listDisplay[0].task).toBe("hello");
     });
-  })
+
+    it('shows completed when clicked', function() {
+      ctrl.taskTerm = "hello";
+      ctrl.addTask();
+      ctrl.complete("hello");
+      expect(ctrl.listDisplay[0].completed).toBe(true)
+    });
+  });
 });
