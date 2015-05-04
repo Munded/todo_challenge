@@ -3,23 +3,30 @@
 <head>
   <meta charset="utf-8">
   <title>To Do List</title>
+  <link rel="stylesheet" type="text/css" href="public/css/style.css">
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-resource/angular-resource.js"></script>
   <script src="js/app.js"></script>
   <script src="js/toDoListController.js"></script>
 </head>
 <body ng-controller="ToDoListController as listCtrl">
-  <h1> To Do </h1>
+  <div id="box">
   <form class="form-horizontal">
+  <h1> To Do </h1>
     <input type="text" ng-model="listCtrl.taskTerm">
     <button class="btn" ng-click="listCtrl.addTask()">Submit</button>
+    <button class="btn" ng-click="listCtrl.empty()">Reset</button>
   </form>
-  <ul class="list-group" ng-repeat="task in listCtrl.listDisplay">
-    <li>
-      <div>{{task.task}}</div>
-      <input type='checkbox' ng-click="listCtrl.complete(task)" ng-model="task.completed">
-      <div ng-show="task.completed">Completed</div>
-    </li>
-  </ul>
+  <div id="tasks">
+    <div ng-hide="listCtrl.listDisplay.length > 0"><h4>Nothing</h4></div>
+    <ul class="list-group" ng-repeat="task in listCtrl.listDisplay">
+      <li>
+        <div>{{task.task}}<input type='checkbox' ng-click="listCtrl.isCompleted(task)" ng-model="task.completed" id="tick"></div>
+        <div id="completed" ng-show="task.completed">Completed</div>
+      </li>
+    </ul>
+  </div>
+  <h4 class="form-horizontal">Things to Do: {{listCtrl.listDisplay.length}}</h4>
+</div>
 </body>
 </html>

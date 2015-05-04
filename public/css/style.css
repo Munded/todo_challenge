@@ -1,0 +1,53 @@
+#box{
+  background: -webkit-linear-gradient(red,yellow);
+  padding: 20px;
+  width: 500px;
+  border-radius: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border-style: solid;
+  border-width: 5px;
+  font-family: fantasy;
+  }
+
+.form-horizontal{
+  background-color: white;
+  width: 300px;
+  padding-bottom: 20px;
+  padding-top: 0.02px;
+  text-align: center;
+  border-radius: 20px;
+  border-color: blue;
+  border-style: solid;
+  margin-bottom: 20px;
+}
+#tasks{
+  background-color: white;
+  width: 400px;
+  margin-left: 100px;
+  padding-top: 0.1px;
+  padding-bottom: 0.1px;
+  padding-left: 10px;
+  border-style: solid;
+  border-radius: 20px;
+  border-color: blue;
+  list-style-type: binary;
+}
+
+#tick{
+  margin-left: 30px
+}
+#completed{
+  color: green;
+  font-style: italic;
+  margin-left: 10px;
+}
+
+.btn{
+  padding: 10px;
+  font-family: cursive;
+  font-weight: bolder;
+  border-radius: 10px;
+  width:200px;
+}

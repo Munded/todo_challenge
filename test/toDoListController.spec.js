@@ -20,11 +20,30 @@ describe('ToDoListController', function() {
       expect(ctrl.listDisplay[0].task).toBe("hello");
     });
 
-    it('shows completed when clicked', function() {
-      ctrl.taskTerm = "hello";
+  
+  it('is completed when clicked', function() {
+     ctrl.taskTerm = "hello";
       ctrl.addTask();
-      ctrl.complete("hello");
+      console.log(ctrl.listDisplay)
+      ctrl.setCompleted("hello");
       expect(ctrl.listDisplay[0].completed).toBe(true)
     });
+
+    it('is not completed when clicked again', function() {
+      ctrl.taskTerm = "hello";
+      ctrl.addTask();
+      ctrl.setCompleted("hello");
+      ctrl.setCompleted("hello");
+      expect(ctrl.listDisplay[0].completed).toBe(false)
+    });
   });
+
+  it('can be reset when clicked', function(){
+    ctrl.taskTerm = "Laundry";
+    ctrl.addTask();
+    ctrl.taskTerm = "Cleaning";
+    ctrl.addTask();
+    ctrl.empty();
+    expect(ctrl.listDisplay.length).toEqual(0)
+  })
 });
