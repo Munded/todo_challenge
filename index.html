@@ -21,7 +21,7 @@
     <div ng-hide="listCtrl.listDisplay.length > 0"><h4>Nothing</h4></div>
     <ul class="list-group" ng-repeat="task in listCtrl.listDisplay">
       <li>
-        <div>{{task.task}}<input type='checkbox' ng-click="listCtrl.isCompleted(task)" ng-model="task.completed" id="tick"></div>
+        <div>{{task.task}}<input type='checkbox' ng-model="task.completed" id="tick"></div>
         <div id="completed" ng-show="task.completed">Completed</div>
       </li>
     </ul>
