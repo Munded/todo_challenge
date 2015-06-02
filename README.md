@@ -4,7 +4,9 @@
 
 ![To Do List](https://github.com/Munded/todo_challenge/blob/master/public/Screen%20Shot%202015-06-01%20at%2019.12.16.png)
 
-A To-do list, written in AngularJS
+A To-do list, written in AngularJS<br>
+
+Heroku link: https://salty-journey-3797.herokuapp.com/
 <br>
 Here are the core user stories:
 **User Stories**
@@ -27,8 +29,7 @@ So I never see them again
 ```
 **Technology Used**
 - AngularJS
-- Jquery
--
+
 
 **Testing done with**
 - Protractor
